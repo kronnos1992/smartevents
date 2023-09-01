@@ -32,7 +32,7 @@ public class EventController : ControllerBase
     public async Task<IActionResult> Get(int id)
     {
         var eventF = await context.Events.FindAsync(id);
-        if (eventF == null)
+        if (eventF != null)
         {
             return Ok(eventF);
 
