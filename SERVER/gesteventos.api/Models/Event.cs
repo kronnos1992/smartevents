@@ -1,8 +1,8 @@
 namespace gesteventos.Models
 {
-    public class Events
+    public class Event
     {
-        public Events()
+        public Event()
         {
 
         }
