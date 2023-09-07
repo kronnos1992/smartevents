@@ -1,0 +1,12 @@
+<h1>COMPONENTE DE EVENTOS</h1>
+
+<!-- diretiva ng-for para mapear uma listagem de dados -->
+<div *ngFor="let evento of eventos">
+    <p><strong>Id: </strong> {{evento.eventId}}</p>
+    <p><strong>Tema: </strong> {{evento.subject}}</p>
+    <p><strong>Data: </strong> {{evento.eventDate}}</p>
+    <p><strong>Pessoas: </strong> {{evento.peopleQty}}</p>
+    <p><strong>Lote: </strong> {{evento.loth}}</p>
+    <p><strong>Imagem: </strong> {{evento.imaUrl}}</p>
+    <hr>
+</div>
