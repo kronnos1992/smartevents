@@ -478,3 +478,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+# databaase
+SmartDb.db
+SmartDb.db.shm
+SmartDb.db.wal

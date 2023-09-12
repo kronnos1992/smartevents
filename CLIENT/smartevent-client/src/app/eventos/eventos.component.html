@@ -1,12 +1,59 @@
-<h1>COMPONENTE DE EVENTOS</h1>
+<h3>EVENTOS</h3>
+<hr>
+<div class="form-inline">
+    <div class=" form-group mb-2" style="display: inline-flex;">
+        <input 
+            type="text" 
+            class="form-control item" 
+            placeholder="Buscar"
+            [(ngModel)]="filterList">
+    </div>
+</div>  
+<table class="table table-striped table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>
+                <button 
+                    class="btn btn-outline-light btn-sm" (click)="isCollapsed = !isCollapsed" type="button">
+                    {{isCollapsed ? 'Exibir Imagem' : 'Ocultar Imagem'}}
+                </button>
+            </th>
+            <th>#</th>
+            <th>Tema</th>
+            <th>Participantes</th>
+            <th>Lote</th>
+            <th>Local</th>
+            <th>Data</th>
+            <th>ACÇÃO</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="eventos && eventos.length">
+     <tr *ngFor="let evento of eventsFounded">
+        <td>
+            <img [collapse]="isCollapsed" [isAnimated]="true" 
+                src="/assets/{{evento.imgUrl}}" 
+                alt="{{evento.imgUrl}}" 
+                [style.width.px]="widthImg"
+                [style.margin.px]="marginImg">
+        </td>
+        <td>{{evento.eventId}}</td>
+        <td>{{evento.subject}}</td>
+        <td>{{evento.peopleQty}}</td>
+        <td>{{evento.loth}}</td>
+        <td>{{evento.place}}</td>
+        <td>{{evento.eventDate}}</td>
+        <td>
+            <button class="btn btn-warning btn-sm" style="margin-left: 2%;">Editar</button>
+            <button class="btn btn-danger btn-sm" style="margin-left: 2%;">Eliminar</button>
+        </td>
+    </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="8" class="text-center"  *ngIf="!eventos.length">
+                <h6>Nenhum registro encontrado!</h6>
+            </td>
+        </tr>
+    </tfoot>
+</table>
 
-<!-- diretiva ng-for para mapear uma listagem de dados -->
-<div *ngFor="let evento of eventos">
-    <p><strong>Id: </strong> {{evento.eventId}}</p>
-    <p><strong>Tema: </strong> {{evento.subject}}</p>
-    <p><strong>Data: </strong> {{evento.eventDate}}</p>
-    <p><strong>Pessoas: </strong> {{evento.peopleQty}}</p>
-    <p><strong>Lote: </strong> {{evento.loth}}</p>
-    <p><strong>Imagem: </strong> {{evento.imaUrl}}</p>
-    <hr>
-</div>

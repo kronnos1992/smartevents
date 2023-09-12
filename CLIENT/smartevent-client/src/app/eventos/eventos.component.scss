@@ -1,0 +1,12 @@
+.line {
+max-width: 50%;
+  display: flex;
+  flex-wrap: wrap; 
+  flex-direction: column;// Permite que os itens quebrem para a próxima linha quando não couberem na largura do container
+}
+
+.item {
+  flex: 1; // Isso faz com que os itens ocupem a mesma largura, tornando-os ambos na mesma linha
+  padding: 10px; // Adicione espaçamento entre os itens, conforme necessário
+  box-sizing: border-box; // Para incluir o espaçamento no cálculo da largura
+}
