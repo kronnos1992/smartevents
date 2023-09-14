@@ -1,5 +1,8 @@
-using System.Text.Json.Serialization;
-using gesteventos.Data;
+using gesteventos.Application.Services.Implementations;
+using gesteventos.Application.Services.Interfaces;
+using gesteventos.Persistence.Database;
+using gesteventos.Persistence.Implementations;
+using gesteventos.Persistence.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,17 +11,30 @@ var configuration = builder.Configuration;
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers()
+    .AddNewtonsoftJson(
+        x =>
+            x.SerializerSettings.ReferenceLoopHandling
+            =
+            Newtonsoft.Json.ReferenceLoopHandling.Ignore
+    );
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddCors();
 
 
-builder.Services.AddDbContext<DataContext>(op =>
+builder.Services.AddDbContext<GestEvetosDbContext>(op =>
    op.UseSqlite(configuration.GetConnectionString("default"))
    .EnableDetailedErrors()
 );
+
+//injecção de dependecia
+builder.Services.AddScoped<IPersistenceContract, PersistenceImplemetations>();
+builder.Services.AddScoped<IEventoService, EventoService>();
+builder.Services.AddScoped<IEventoPersistenceContract, EventoPersistenceImplementation>();
+
+
 
 var app = builder.Build();
 

@@ -5,6 +5,12 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gesteventos.api", "gesteventos.api\gesteventos.api.csproj", "{3F4B9047-08D3-4A18-A5A2-9BD43E6CEAB6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gesteventos.Domain", "gesteventos.Domain\gesteventos.Domain.csproj", "{EEF510AD-294C-4791-A833-999CD977C06D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gesteventos.Application", "gesteventos.Application\gesteventos.Application.csproj", "{FD3E8478-B7F0-4B38-876B-E519AD0BC820}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gesteventos.Persistence", "gesteventos.Persistence\gesteventos.Persistence.csproj", "{C5F2E4C0-FC41-4FB4-B270-301C800F7127}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +24,17 @@ Global
 		{3F4B9047-08D3-4A18-A5A2-9BD43E6CEAB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F4B9047-08D3-4A18-A5A2-9BD43E6CEAB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F4B9047-08D3-4A18-A5A2-9BD43E6CEAB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEF510AD-294C-4791-A833-999CD977C06D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEF510AD-294C-4791-A833-999CD977C06D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEF510AD-294C-4791-A833-999CD977C06D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEF510AD-294C-4791-A833-999CD977C06D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD3E8478-B7F0-4B38-876B-E519AD0BC820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD3E8478-B7F0-4B38-876B-E519AD0BC820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD3E8478-B7F0-4B38-876B-E519AD0BC820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD3E8478-B7F0-4B38-876B-E519AD0BC820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5F2E4C0-FC41-4FB4-B270-301C800F7127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5F2E4C0-FC41-4FB4-B270-301C800F7127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5F2E4C0-FC41-4FB4-B270-301C800F7127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5F2E4C0-FC41-4FB4-B270-301C800F7127}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
